@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>String.vn</title>
+    <script type="text/javascript">
+    var chuoi = "Vo Thi To Nhu 123";
+    document.write("Vị trí xuất hiện của chuỗi 123 là "+ chuoi.indexOf("123")+ "<br>");
+    var name = "anna Nguyen Binh Khiem anna highschool ann";
+    document.write("Vị trí xuất hiện cuối của chuỗi anna là: <b>"+name.lastIndexOf("anna")+"<br>");
+    document.write("Cắt chuỗi: <b>"+ name.slice(23,28)+"<br>");
+    document.write("Cắt chuỗi: <b>"+ name.slice(23)+"<br>");
+    document.write("Cắt chuỗi: <b>"+ name.substring(20)+"<br>");// substring k đc âm
+    document.write("Cắt chuỗi: <b>"+ chuoi.substr(-15, 10)+"<br>");// 2 tham số là vị trí ban đầu và độ dài chuỗi cần cắt
+    
+    //TÌM KIẾM VÀ THAY THẾ
+    var wel = "Welcome to Nhu's house";
+    document.writeln(wel+"<br>");
+    var x = wel.replace("Nhu's", "Bach's");
+    document.writeln(x);
+    document.write(wel.toLocaleUpperCase()+"<br>");
+    document.write(x.toLocaleLowerCase()+"<br>");
+    document.write(wel.concat(x));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

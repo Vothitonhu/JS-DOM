@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>cssjs.vn</title>
+    <script type="text/javascript">
+        function changeColor(){
+            var divId = document.getElementById("test");
+            divId.style.color = "orange";
+        }
+        function changeBgColor(){
+            var divId = document.getElementById("test");
+            divId.style.backgroundColor = "purple";
+        }
+        function changeFontSize(){
+            var divId = document.getElementById("test");
+            divId.style.fontSize = "20px";
+        }
+        function changeMargin(){
+            var divId = document.getElementById("test");
+            divId.style.marginTop = "50px";
+        }
+    </script>
+</head>
+<body>
+    <div id="test">Hello everyone, my name is Nhu. 
+        I am from DakLak province which is a very nice place near the South of Vietnam</div>
+    <input type="button" value="Thay đổi màu text" onclick="changeColor()">
+    <br>
+    <input type="button" value="Thay đổi màu nền" onclick="changeBgColor()">
+    <br>
+    <input type="button" value="Thay đổi kích thước chữ" onclick="changeFontSize()">
+    <br>
+    <input type="button" value="Thay đổi vị trí" onclick="changeMargin()">
+</body>
+</html>

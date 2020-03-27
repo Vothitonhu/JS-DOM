@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lalisa.tonhu</title>
+</head>
+<body>
+    <form action="#" id="abc" name="test">
+        Chọn tháng:
+        <select id="sid">
+            <script type="text/javascript">
+            var selectId = document.getElementById("sid");
+                for(i=1;i<=12;i++){
+                  var tagOption = document.createElement("option");
+                  var textNode = document.createTextNode("Tháng "+ i);
+                  tagOption.appendChild(textNode);
+                  selectId.appendChild(tagOption);
+                }
+// cach 2
+                // for(i=1;i<=12;i++){
+                //    document.writeln("<option value='"+i+"'>Tháng "+i+"</option>");
+                // }
+            </script>
+        </select>
+    </form>
+</body>
+</html>

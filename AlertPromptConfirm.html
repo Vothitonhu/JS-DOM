@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript">
+    function xuatAlert() {
+        alert("Vui lòng nhập đúng email");
+    }
+    function xuatConfirm(){
+       var xacNhan =  confirm("Bạn đã đánh giá bài viết chưa");
+       if(xacNhan){
+           document.write("xin cảm ơn các bạn");
+       } else {
+           document.write("Vui lòng đánh giá bài viết");
+       }
+    }
+    function nhapDuLieu(){
+        var name = prompt("Vui lòng nhập vào tên của bạn");
+        document.write(name);
+    }
+    </script>
+    
+</head>
+<body>
+    <input type="button" value="Thông báo" onclick="xuatAlert()">
+    <input type="button" value="Xác nhận" onclick="xuatConfirm()">
+    <input type="button" value="Nhập dữ liệu" onclick="nhapDuLieu()">
+</body>
+</html>

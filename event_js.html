@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Event</title>
+    <script type="text/JavaScript">
+    function changeColor(choose) {
+        var txt = document.getElementById("test");
+        if(choose == 1){ //onfocus
+            txt.style.border = "solid 4px red";
+        } else{ //onBlur
+            txt.style.border = "solid 1px green";
+        }
+    }
+    function changeChoice() {
+        var theP = document.getElementById("output");
+        var dropdown = document.getElementById("choose");
+        theP.innerHTML = dropdown.value;
+    }
+    function changeColorBg(thamso) {
+        var txt = document.getElementById("test");
+        if(thamso == 1){//hover
+            txt.style.backgroundColor = "pink";
+        } else if (thamso == 2){
+            txt.style.backgroundColor = "blue";
+        } else if (thamso == 3){
+            txt.style.backgroundColor = "purple";
+        } else if (thamso == 4){
+            txt.style.backgroundColor = "green";
+        }
+        
+    }
+    function layGiaTri() {
+        var theP = document.getElementById("noidung").innerHTML = "Hello Everyone";
+        document.getElementById("noidung").style.color = "purple";
+        // theP.innerHTML = "xin chao Nhunhu";
+        // theP.style.color = "pink";
+    }
+    function layGiaTriTheP2() {
+        var AllTheP = document.getElementsByTagName("p");
+        alert("Số thẻ p: " + AllTheP.length + " Nội dung thẻ p: "+ AllTheP[3].innerHTML);
+    }
+    function layGiaTriClass() {
+        var AllTheP = document.getElementsByClassName("demo");
+        alert("Số thẻ p: "+ AllTheP.length + " Nội dung thẻ P: "+ AllTheP[1].innerHTML);
+    }
+    </script>
+</head>
+<body>
+    <input type="text" id="test" onfocus="changeColor(1)" onblur="changeColor(2)" onmouseover="changeColorBg(1)" 
+    onmouseout="changeColorBg(2)" onmousedown="changeColorBg(3)" onmouseup="changeColorBg(4)">
+    <p id="output"></p>
+    <select id="choose" onchange="changeChoice()">
+        <option>Vietnam</option>
+        <option>USA</option>
+        <option>Rusia</option>
+    </select>
+
+    <p id="noidung"></p>
+    <P class="demo">Thẻ p1</P>
+    <p>Thẻ p2</p>
+    <p class="demo">Thẻ p3</p>
+    <input type="button" value="Lấy giá trị" onclick="layGiaTri()">
+
+    <input type="button" value="Lấy giá trị thẻ p" onclick="layGiaTriTheP2()">
+    <input type="button" value="Lấy giá trị class" onclick="layGiaTriClass()">
+</body>
+</html>

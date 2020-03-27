@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lalisa.nhunhu</title>
+</head>
+<body>
+   <form action="#">
+       Số dòng: <input type="text" id="soDong">
+       <br>
+       Số cột: <input type="text" id="soCot">
+       <br>
+       <input type="button" value="Tạo Table" onclick="return taoTable()">
+   </form> 
+   <br>
+   <div id="container"></div>
+   <script type="text/JavaScript">
+   function taoTable() {
+       var soDongId = document.getElementById("soDong");
+       var soCotId = document.getElementById("soCot");
+       var divId = document.getElementById("container");
+       
+       if(isNaN(soDongId.value) || isNaN(soCotId.value)){
+           alert("Nhập vào số dòng và số cột");
+           return false;
+       } else{
+            // Lấy số dòng, số cột người dùng nhập vào
+             var soDong = parseInt(soDongId.value);
+             var soCot = parseInt(soCotId.value);
+
+             //Tạo thẻ table
+             var tagTable = document.createElement("table");
+             tagTable.border = 1;
+             tagTable.style.backgroundColor = "pink";
+             for(i=0;i<soDong;i++){
+                 //tạo thẻ dòng
+                 var tagTr = document.createElement("tr");
+                 tagTable.appendChild(tagTr);
+                 for(j=0;j<soCot;j++){
+                     var tagTd = document.createElement("td");
+                     var textNode = document.createTextNode("ô "+i+" ,"+j);
+                     tagTd.appendChild(textNode);
+                     tagTr.appendChild(tagTd);
+                 }
+             }
+             divId.appendChild(tagTable);
+             return true;
+       }
+   }
+   </script>
+</body>
+</html>

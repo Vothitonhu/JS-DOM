@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lalisa.www</title>
+</head>
+<body>
+    <form action="#">
+        Số a: <input type="text" id="soA">
+        <br>
+        Số b: <input type="text" id="soB">
+        <br>
+        Kết quả: <input type="text" id="ketQua">
+        <br>
+        <input type="button" value="Tính tổng" onclick="tinhTong()">
+    </form>
+    <script type="text/JavaScript">
+    function tinhTong() {
+        var soA = document.getElementById("soA");
+        var soB = document.getElementById("soB");
+        var ketQua = document.getElementById("ketQua");
+        if(isNaN(soA.value) || isNaN(soB.value)){
+            alert("Nhập vào số a và số b");
+            return false;
+        } else{
+            soA = parseFloat(soA.value); 
+            soB = parseFloat(soB.value);
+            var tong = soA + soB;
+            ketQua.value = tong;
+            return true;
+        }    
+    }
+    </script>
+</body>
+</html>
