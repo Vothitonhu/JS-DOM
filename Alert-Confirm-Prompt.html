@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 hộp thoại</title>
+    <script type="text/javascript">
+        function xuatThongBao() {
+            alert("Mời các bạn đến vs chuỗi nhà hàng Homefood.nb");
+        }
+        function xacNhan() {
+            var xacNhan;
+            xacNhan = confirm("Bạn đã đánh giá nhà hàng của chúng tôi chưa? ");
+            if (xacNhan) {
+                document.write("Cảm ơn các bạn");
+            } else {
+                document.write("Vui lòng đánh giá");
+            }
+        }
+        //Đề mô Prompt box
+        function nhapDuLieu() {
+            var ten;
+            ten = prompt("Vui lòng nhập vào tên của bạn");
+            document.write(ten);
+        }
+    </script>
+</head>
+
+<body>
+    <input type="button" value="Thông báo" onclick="xuatThongBao()">
+    <br>
+    <input type="button" value="Xác nhận" onclick="xacNhan()">
+    <br>
+    <input type="button" value="Nhập dữ liệu" onclick="nhapDuLieu()">
+</body>
+
+</html>
